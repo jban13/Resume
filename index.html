@@ -3,25 +3,25 @@
 
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<meta charset="utf-8">
+    <title>{{ site.data.personal.name }}</title>
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1">
-
-<title>{{ site.data.personal.name }}</title>
-
-<link rel="icon"
-      type="image/png"
-      href="assets/favicon.png">
-
-<link rel="stylesheet"
-      href="assets/resume.css">
-
+    <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relativelative_url }}
 </head>
 
-s="name">
+<body>
+
+<div class="resume">
+
+    <header class="header">
+
+        <div>
+
+            <h1 class="name">
                 {{ site.data.personal.name }}
             </h1>
 
@@ -30,17 +30,25 @@ s="name">
             </div>
 
             <div class="contact">
-                <span>{{ site.data.personal.phone }}</span>
-                <span>{{ site.data.personal.email }}</span>
-                <span>{{ site.data.personal.linkedin }}</span>
-                <span>{{ site.data.personal.location }}</span>
+
+                <span>📞 {{ site.data.personal.phone }}</span>
+
+                <span>✉ {{ site.data.personal.email }}</span>
+
+                <span>🔗 {{ site.data.personal.linkedin }}</span>
+
+                <span>📍 {{ site.data.personal.location }}</span>
+
+                <span>🎂 {{ site.data.personal.birthdate }},
+                    {{ site.data.personal.birthplace }}</span>
+
             </div>
 
         </div>
 
-        assets/profile.png
+        {{ '/assets/profile.png' | relative_url }}
 
-    </div>
+    </header>
 
     <div class="content">
 
@@ -68,9 +76,7 @@ s="name">
 
                     <div class="meta">
                         {{ job.from }} - {{ job.to }}
-                    </div>
-
-                    <div class="meta">
+                        &nbsp;&nbsp;•&nbsp;&nbsp;
                         {{ job.location }}
                     </div>
 
@@ -93,6 +99,7 @@ s="name">
                 </div>
 
                 <div class="skill-category">
+
                     <div class="skill-category-title">
                         Fachliche Kompetenz
                     </div>
@@ -100,16 +107,19 @@ s="name">
                     {% for skill in site.data.skills.competence %}
                     <span class="skill">{{ skill }}</span>
                     {% endfor %}
+
                 </div>
 
                 <div class="skill-category">
+
                     <div class="skill-category-title">
-                        Software & Tools
+                        Software &amp; Tools
                     </div>
 
                     {% for skill in site.data.skills.software %}
                     <span class="skill">{{ skill }}</span>
                     {% endfor %}
+
                 </div>
 
             </section>
@@ -130,7 +140,7 @@ s="name">
                             {{ interest.title }}
                         </div>
 
-                        <div>
+                        <div class="interest-text">
                             {{ interest.description }}
                         </div>
 
@@ -182,6 +192,10 @@ s="name">
                         {{ item.from }} - {{ item.to }}
                     </div>
 
+                    <div class="meta">
+                        {{ item.location }}
+                    </div>
+
                 </div>
 
                 {% endfor %}
@@ -204,9 +218,17 @@ s="name">
                     </div>
 
                     <div class="dots">
-                        {% for i in (1..language.score) %}
-                        ●
+
+                        {% assign full = language.score %}
+
+                        {% for i in (1..5) %}
+                            {% if i <= full %}
+                                ●
+                            {% else %}
+                                ○
+                            {% endif %}
                         {% endfor %}
+
                     </div>
 
                 </div>
@@ -254,12 +276,12 @@ s="name">
                     </div>
 
                     <div class="project-location">
-                        {{ project.location }}
+                        📍 {{ project.location }}
                     </div>
 
                     <ul>
-                        {% for item in project.bullets %}
-                        <li>{{ item }}</li>
+                        {% for bullet in project.bullets %}
+                        <li>{{ bullet }}</li>
                         {% endfor %}
                     </ul>
 
