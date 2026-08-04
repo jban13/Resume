@@ -452,22 +452,6 @@
 
                     {% endif %}
 
-                    {% if project.role %}
-
-                    <div class="project-role">
-                        {{ project.role }}
-                    </div>
-
-                    {% endif %}
-
-                    {% if project.description %}
-
-                    <div class="project-description">
-                        {{ project.description }}
-                    </div>
-
-                    {% endif %}
-
                     {% if project.bullets %}
 
                     <ul class="bullet-list">
@@ -481,22 +465,6 @@
                         {% endfor %}
 
                     </ul>
-
-                    {% endif %}
-
-                    {% if project.technologies %}
-
-                    <div class="project-technologies">
-
-                        {% for technology in project.technologies %}
-
-                        <span class="skill">
-                            {{ technology }}
-                        </span>
-
-                        {% endfor %}
-
-                    </div>
 
                     {% endif %}
 
