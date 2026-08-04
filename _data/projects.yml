@@ -1,45 +1,30 @@
 - name: Vibracoustic
-
   customer: Vibracoustic
-
   role: >
     SPS-Programmierung und Inbetriebnahme
     von Fertigungsanlagen.
-
   period: 2023
-
   technologies:
     - TIA Portal
     - WinCC
     - Profinet
-
   description: >
     Automatisierung einer Produktionsanlage zur
     Fertigung von Schwingungs- und
     Geräuschdämpfungskomponenten für die
     Automobilindustrie.
-
   responsibilities:
-
     - SPS-Programmierung
-
     - Inbetriebnahme
-
     - Fehlersuche
-
     - Visualisierung
 
 - name: BMW Karosseriebau
-
   customer: BMW
-
   role: SPS-Programmierung
-
   period: 2024
-
   technologies:
     - TIA Portal
     - ABB
-
   description: >
     Beschreibung folgt.
