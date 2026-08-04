@@ -18,10 +18,10 @@
     </title>
 
     <!-- Favicon -->
-    assets/favicon.png
+    <link rel="icon" href="Resume/assets/favicon.png">
 
     <!-- Lebenslauf-Layout -->
-    assets/resume.css
+    <link rel="stylesheet" href="Resume/assets/resume.css">
 </head>
 
 <body>
@@ -55,16 +55,12 @@
                 {% if site.data.personal.email %}
                 <span class="contact-item">
                     {{ site.data.personal.email }}
-                        {{ site.data.personal.email }}
-                    </a>
                 </span>
                 {% endif %}
 
                 {% if site.data.personal.linkedin %}
                 <span class="contact-item">
                     https://{{ site.data.personal.linkedin }}
-                        {{ site.data.personal.linkedin }}
-                    </a>
                 </span>
                 {% endif %}
 
@@ -76,8 +72,6 @@
 
                 {% if site.data.personal.birthdate or site.data.personal.birthplace %}
                 <span class="contact-item">
-                    {{ site.data.personal.birthdate }}
-
                     {% if site.data.personal.birthdate and site.data.personal.birthplace %}
                     ,
                     {% endif %}
