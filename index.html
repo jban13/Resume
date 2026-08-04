@@ -1,49 +1,32 @@
----
----
-
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
 
-    <title>{{ site.data.personal.name }}</title>
+    <title>Resume Test</title>
 
-    <link rel="icon" type="image/lative_url }}
+    <link rel="stylesheet" href="/Resumebody>
 
-    <link rel="stylesheet"
-          href="{{ '/assets/resume.css' | relative_url }}">
-  <header class="header">
+<div class="resume">
+
+    <header class="header">
 
         <div>
-
-            <h1 class="name">
-                {{ site.data.personal.name }}
-            </h1>
+            <h1 class="name">Jan Borgmeier</h1>
 
             <div class="subtitle">
-                {{ site.data.personal.title }}
+                Senior Ingenieur | Automatisierungsingenieur
             </div>
 
             <div class="contact">
-
-                <span>📞 {{ site.data.personal.phone }}</span>
-
-                <span>✉ {{ site.data.personal.email }}</span>
-
-                <span>🔗 {{ site.data.personal.linkedin }}</span>
-
-                <span>📍 {{ site.data.personal.location }}</span>
-
+                <span>+49 170 3611267</span>
+                <span>jan.borgmeier@t-online.de</span>
             </div>
-
         </div>
 
-        <img
-            class="profile-image"
-            src="{{ '/assets/profile.png' | relative_url }}"
-            alt
+    </header>
+
+    <div class="content">
 
         <div>
 
@@ -53,101 +36,25 @@
                     Erfahrung
                 </div>
 
-                {% for job in site.data.experience %}
-
                 <div class="job">
 
                     <div class="job-title">
-                        {{ job.title }}
+                        Automatisierungsingenieur
                     </div>
 
                     <div class="company">
-                        {{ job.company }}
+                        FRIMO Innovative Technologies GmbH
                     </div>
 
                     <div class="meta">
-                        {{ job.from }} - {{ job.to }}
+                        10/2020 - Heute
                     </div>
-
-                    <div class="meta">
-                        {{ job.location }}
-                    </div>
-
-                    <ul>
-                        {% for item in job.bullets %}
-                        <li>{{ item }}</li>
-                        {% endfor %}
-                    </ul>
-
-                </div>
-
-                {% endfor %}
-
-            </section>
-
-            <section class="section">
-
-                <div class="section-title">
-                    Kenntnisse
-                </div>
-
-                <div class="skill-category">
-
-                    <div class="skill-category-title">
-                        Fachliche Kompetenz
-                    </div>
-
-                    {% for skill in site.data.skills.competence %}
-                    <span class="skill">{{ skill }}</span>
-                    {% endfor %}
-
-                </div>
-
-                <div class="skill-category">
-
-                    <div class="skill-category-title">
-                        Software &amp; Tools
-                    </div>
-
-                    {% for skill in site.data.skills.software %}
-                    <span class="skill">{{ skill }}</span>
-                    {% endfor %}
-
-                </div>
-
-            </section>
-
-            <section class="section">
-
-                <div class="section-title">
-                    Interessen
-                </div>
-
-                <div class="interests">
-
-                    {% for interest in site.data.interests %}
-
-                    <div>
-
-                        <div class="interest-title">
-                            {{ interest.title }}
-                        </div>
-
-                        <div class="interest-text">
-                            {{ interest.description }}
-                        </div>
-
-                    </div>
-
-                    {% endfor %}
 
                 </div>
 
             </section>
 
         </div>
-
-        <!-- RECHTE SPALTE -->
 
         <div>
 
@@ -158,152 +65,8 @@
                 </div>
 
                 <div class="summary">
-                    {{ site.data.summary.text }}
+                    Test für CSS Einbindung.
                 </div>
-
-            </section>
-
-            <section class="section">
-
-                <div class="section-title">
-                    Ausbildung
-                </div>
-
-                {% for item in site.data.education %}
-
-                <div class="job">
-
-                    <div class="job-title">
-                        {{ item.degree }}
-                    </div>
-
-                    <div class="company">
-                        {{ item.university }}
-                    </div>
-
-                    <div class="meta">
-                        {{ item.from }} - {{ item.to }}
-                    </div>
-
-                    <div class="meta">
-                        {{ item.location }}
-                    </div>
-
-                </div>
-
-                {% endfor %}
-
-            </section>
-
-            <section class="section">
-
-                <div class="section-title">
-                    Sprachen
-                </div>
-
-                {% for language in site.data.languages %}
-
-                <div class="language">
-
-                    <div>
-
-                        <strong>
-                            {{ language.language }}
-                        </strong>
-
-                        <br>
-
-                        {{ language.level }}
-
-                    </div>
-
-                    <div class="dots">
-
-                        {% assign score = language.score | plus: 0 %}
-
-                        {% for i in (1..5) %}
-                            {% if i <= score %}
-                                ●
-                            {% else %}
-                                ○
-                            {% endif %}
-                        {% endfor %}
-
-                    </div>
-
-                </div>
-
-                {% endfor %}
-
-            </section>
-
-            <section class="section">
-
-                <div class="section-title">
-                    Zertifikate
-                </div>
-
-                {% for cert in site.data.certificates %}
-
-                <div class="job">
-
-                    <div class="company">
-                        {{ cert.name }}
-                    </div>
-
-                    <div>
-                        {{ cert.issuer }}
-                    </div>
-
-                </div>
-
-                {% endfor %}
-
-            </section>
-
-            <section class="section">
-
-                <div class="section-title">
-                    Projekte
-                </div>
-
-                {% for project in site.data.projects %}
-
-                <div class="project">
-
-                    <div class="project-title">
-                        {{ project.name }}
-                    </div>
-
-                    {% if project.location %}
-                    <div class="project-location">
-                        {{ project.location }}
-                    </div>
-                    {% endif %}
-
-                    {% if project.role %}
-                    <div class="meta">
-                        {{ project.role }}
-                    </div>
-                    {% endif %}
-
-                    {% if project.description %}
-                    <p>
-                        {{ project.description }}
-                    </p>
-                    {% endif %}
-
-                    {% if project.bullets %}
-                    <ul>
-                        {% for bullet in project.bullets %}
-                        <li>{{ bullet }}</li>
-                        {% endfor %}
-                    </ul>
-                    {% endif %}
-
-                </div>
-
-                {% endfor %}
 
             </section>
 
