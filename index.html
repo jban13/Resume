@@ -1,4 +1,5 @@
---- ---
+---
+---
 
 <!DOCTYPE html>
 <html lang="de">
@@ -7,7 +8,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="{{ site.data.personal.title }} – Lebenslauf von {{ site.data.personal.name }}">
+    <meta
+        name="description"
+        content="{{ site.data.personal.title }} – Lebenslauf von {{ site.data.personal.name }}"
+    >
 
     <title>
         {{ site.data.personal.name }} | Lebenslauf
@@ -22,69 +26,82 @@
 
 <body>
 
-    <div class="resume">
+<div class="resume">
 
-        <!-- =====================================================
+    <!-- =====================================================
          KOPFBEREICH
          ===================================================== -->
 
-        <header class="header">
+    <header class="header">
 
-            <div class="header-content">
+        <div class="header-content">
 
-                <h1 class="name">
+            <h1 class="name">
                 {{ site.data.personal.name }}
             </h1>
 
-                <div class="subtitle">
-                    {{ site.data.personal.title }}
-                </div>
+            <div class="subtitle">
+                {{ site.data.personal.title }}
+            </div>
 
-                <div class="contact">
+            <div class="contact">
 
-                    {% if site.data.personal.phone %}
-                    <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2z" />
-                        </svg>
+    {% if site.data.personal.phone %}
+    <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M6.62 10.79a15.46 15.46 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24 11.36 11.36 0 0 0 3.57.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.36 11.36 0 0 0 .57 3.57 1 1 0 0 1-.25 1.02l-2.2 2.2z"/>
+        </svg>
 
-                        {{ site.data.personal.phone }}
-                    </div>
-                    {% endif %} {% if site.data.personal.email %}
-                    <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
-                        </svg>
+            {{ site.data.personal.phone }}
+        </a>
+    </div>
+    {% endif %}
 
-                        {{ site.data.personal.email }}
-                    </div>
-                    {% endif %} {% if site.data.personal.linkedin %}
-                    <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18v-7.5H5.85V18h2.49zM7.1 9.48a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88zM18.15 18v-4.11c0-2.2-1.17-3.22-2.74-3.22a2.37 2.37 0 0 0-2.15 1.18v-1.35h-2.49V18h2.49v-3.72c0-.98.19-1.93 1.41-1.93 1.2 0 1.22 1.13 1.22 2V18h2.26z"
-                            />
-                        </svg>
 
-                        {{ site.data.personal.linkedin }}
+    {% if site.data.personal.email %}
+    <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        
+            {{ site.data.personal.email }}
+        </a>
+    </div>
+    {% endif %}
 
-                    </div>
-                    {% endif %} {% if site.data.personal.location %}
-                    <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z" />
-                        </svg>
 
-                        <span>
+    {% if site.data.personal.linkedin %}
+    <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 3A2 2 0 0 1 21 5v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18v-7.5H5.85V18h2.49zM7.1 9.48a1.44 1.44 0 1 0 0-2.88 1.44 1.44 0 0 0 0 2.88zM18.15 18v-4.11c0-2.2-1.17-3.22-2.74-3.22a2.37 2.37 0 0 0-2.15 1.18v-1.35h-2.49V18h2.49v-3.72c0-.98.19-1.93 1.41-1.93 1.2 0 1.22 1.13 1.22 2V18h2.26z"/>
+        </svg>
+
+                    https://{{ site.data.personal.linkedin }}
+        
+    </div>
+    {% endif %}
+
+
+    {% if site.data.personal.location %}
+    <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6a2.5 2.5 0 0 1 0 5.5z"/>
+        </svg>
+
+        <span>
             {{ site.data.personal.location }}
         </span>
-                    </div>
-                    {% endif %} {% if site.data.personal.birthdate or site.data.personal.birthplace %}
-                    <div class="contact-item">
-                        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
-                            <path d="M19 4h-1V2h-2v2H8V2H6v2H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8h16v8zm0-10H4V7a1 1 0 0 1 1-1h1v2h2V6h8v2h2V6h1a1 1 0 0 1 1 1v2z" />
-                        </svg>
+    </div>
+    {% endif %}
 
-                        <span>
+
+    {% if site.data.personal.birthdate or site.data.personal.birthplace %}
+    <div class="contact-item">
+        <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M19 4h-1V2h-2v2H8V2H6v2H5a3 3 0 0 0-3 3v12a3 3 0 0 0 3 3h14a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3zm1 15a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-8h16v8zm0-10H4V7a1 1 0 0 1 1-1h1v2h2V6h8v2h2V6h1a1 1 0 0 1 1 1v2z"/>
+        </svg>
+
+        <span>
             {{ site.data.personal.birthdate }}
 
             {% if site.data.personal.birthdate and site.data.personal.birthplace %}
@@ -93,203 +110,250 @@
             {{ site.data.personal.birthplace }}
             {% endif %}
         </span>
-                    </div>
+    </div>
+    {% endif %}
+
+</div>
+<!--
+                
+                {% if site.data.personal.phone %}
+                <span class="contact-item">
+                    {{ site.data.personal.phone }}
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.email %}
+                <span class="contact-item">
+                    {{ site.data.personal.email }}
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.linkedin %}
+                <span class="contact-item">
+                    https://{{ site.data.personal.linkedin }}
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.location %}
+                <span class="contact-item">
+                    {{ site.data.personal.location }}
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.birthdate or site.data.personal.birthplace %}
+                <span class="contact-item">
+                    {% if site.data.personal.birthdate and site.data.personal.birthplace %}
+                    {{ site.data.personal.birthdate }}, {{ site.data.personal.birthplace }}
                     {% endif %}
+                </span>
+                {% endif %}
 
-                </div>
+            </div>
 
-                <!--
+        </div>
+-->
+            
+        <!--
             Das Bild wird automatisch ausgeblendet,
             solange assets/profile.png noch nicht existiert.
         -->
 
-                <div class="profile-container">
+        <div class="profile-container">
 
-                    assets/profile.png
+            assets/profile.png
 
-                </div>
+        </div>
 
-            <!--</div> -->
-
-        </header>
+    </header>
 
 
-        <!-- =====================================================
+    <!-- =====================================================
          ZWEISPALTIGER HAUPTBEREICH
          ===================================================== -->
 
-        <main class="content">
+    <main class="content">
 
-            <!-- =================================================
+        <!-- =================================================
              LINKE SPALTE
              ================================================= -->
 
-            <div class="left-column">
+        <div class="left-column">
 
-                <!-- BERUFSERFAHRUNG -->
+            <!-- BERUFSERFAHRUNG -->
 
-                <section class="section experience-section">
+            <section class="section experience-section">
 
-                    <h2 class="section-title">
+                <h2 class="section-title">
                     Erfahrung
-                </h2> {% for job in site.data.experience %}
+                </h2>
 
-                    <article class="job">
+                {% for job in site.data.experience %}
 
-                        <h3 class="job-title">
+                <article class="job">
+
+                    <h3 class="job-title">
                         {{ job.title }}
                     </h3>
 
-                        <div class="company">
-                            {{ job.company }}
-                        </div>
+                    <div class="company">
+                        {{ job.company }}
+                    </div>
 
-                        <div class="meta job-meta">
+                    <div class="meta job-meta">
 
-                            <span class="date">
+                        <span class="date">
                             {{ job.from }} – {{ job.to }}
-                        </span> {% if job.location %}
-                            <span class="location">
+                        </span>
+
+                        {% if job.location %}
+                        <span class="location">
                             {{ job.location }}
-                        </span> {% endif %}
-
-                        </div>
-
-                        {% if job.bullets %}
-
-                        <ul class="bullet-list">
-
-                            {% for item in job.bullets %}
-
-                            <li>
-                                {{ item }}
-                            </li>
-
-                            {% endfor %}
-
-                        </ul>
-
+                        </span>
                         {% endif %}
 
-                    </article>
+                    </div>
 
-                    {% endfor %}
+                    {% if job.bullets %}
 
-                </section>
+                    <ul class="bullet-list">
+
+                        {% for item in job.bullets %}
+
+                        <li>
+                            {{ item }}
+                        </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                    {% endif %}
+
+                </article>
+
+                {% endfor %}
+
+            </section>
 
 
-                <!-- KENNTNISSE -->
+            <!-- KENNTNISSE -->
 
-                <section class="section skills-section">
+            <section class="section skills-section">
 
-                    <h2 class="section-title">
+                <h2 class="section-title">
                     Kenntnisse
                 </h2>
 
-                    <div class="skill-category">
+                <div class="skill-category">
 
-                        <h3 class="skill-category-title">
+                    <h3 class="skill-category-title">
                         Fachliche Kompetenz
                     </h3>
 
-                        <div class="skills">
+                    <div class="skills">
 
-                            {% for skill in site.data.skills.competence %}
+                        {% for skill in site.data.skills.competence %}
 
-                            <span class="skill">
+                        <span class="skill">
                             {{ skill }}
-                        </span> {% endfor %}
-
-                        </div>
-
-                    </div>
-
-                    <div class="skill-category">
-
-                        <h3 class="skill-category-title">
-                        Software &amp; Tools
-                    </h3>
-
-                        <div class="skills">
-
-                            {% for skill in site.data.skills.software %}
-
-                            <span class="skill">
-                            {{ skill }}
-                        </span> {% endfor %}
-
-                        </div>
-
-                    </div>
-
-                </section>
-
-
-                <!-- INTERESSEN -->
-
-                <section class="section interests-section">
-
-                    <h2 class="section-title">
-                    Interessen
-                </h2>
-
-                    <div class="interests">
-
-                        {% for interest in site.data.interests %}
-
-                        <article class="interest">
-
-                            <h3 class="interest-title">
-                            {{ interest.title }}
-                        </h3>
-
-                            <div class="interest-text">
-                                {{ interest.description }}
-                            </div>
-
-                        </article>
+                        </span>
 
                         {% endfor %}
 
                     </div>
 
-                </section>
+                </div>
 
-            </div>
+                <div class="skill-category">
+
+                    <h3 class="skill-category-title">
+                        Software &amp; Tools
+                    </h3>
+
+                    <div class="skills">
+
+                        {% for skill in site.data.skills.software %}
+
+                        <span class="skill">
+                            {{ skill }}
+                        </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            </section>
 
 
-            <!-- =================================================
+            <!-- INTERESSEN -->
+
+            <section class="section interests-section">
+
+                <h2 class="section-title">
+                    Interessen
+                </h2>
+
+                <div class="interests">
+
+                    {% for interest in site.data.interests %}
+
+                    <article class="interest">
+
+                        <h3 class="interest-title">
+                            {{ interest.title }}
+                        </h3>
+
+                        <div class="interest-text">
+                            {{ interest.description }}
+                        </div>
+
+                    </article>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
              RECHTE SPALTE
              ================================================= -->
 
-            <aside class="right-column">
+        <aside class="right-column">
 
-                <!-- ZUSAMMENFASSUNG -->
+            <!-- ZUSAMMENFASSUNG -->
 
-                <section class="section summary-section">
+            <section class="section summary-section">
 
-                    <h2 class="section-title">
+                <h2 class="section-title">
                     Zusammenfassung
                 </h2>
 
-                    <div class="summary">
-                        {{ site.data.summary.text }}
-                    </div>
+                <div class="summary">
+                    {{ site.data.summary.text }}
+                </div>
 
-                </section>
+            </section>
 
 
-                <!-- AUSBILDUNG -->
+            <!-- AUSBILDUNG -->
 
-                <section class="section education-section">
+            <section class="section education-section">
 
-                    <h2 class="section-title">
+                <h2 class="section-title">
                     Ausbildung
-                </h2> {% for item in site.data.education %}
+                </h2>
 
-                    <article class="job education-item">
+                {% for item in site.data.education %}
 
-                        <h3 class="job-title">
+                <article class="job education-item">
+
+                    <h3 class="job-title">
 
                         {{ item.degree }}
 
@@ -299,164 +363,195 @@
 
                     </h3>
 
-                        <div class="company">
-                            {{ item.university }}
-                        </div>
+                    <div class="company">
+                        {{ item.university }}
+                    </div>
 
-                        <div class="meta">
+                    <div class="meta">
 
-                            <span class="date">
+                        <span class="date">
                             {{ item.from }} – {{ item.to }}
-                        </span> {% if item.location %}
-                            <span class="location">
+                        </span>
+
+                        {% if item.location %}
+                        <span class="location">
                             {{ item.location }}
-                        </span> {% endif %}
+                        </span>
+                        {% endif %}
 
-                        </div>
+                    </div>
 
-                    </article>
+                </article>
 
-                    {% endfor %}
+                {% endfor %}
 
-                </section>
+            </section>
 
 
-                <!-- SPRACHEN -->
+            <!-- SPRACHEN -->
 
-                {% if site.data.languages %}
+            {% if site.data.languages %}
 
-                <section class="section languages-section">
+            <section class="section languages-section">
 
-                    <h2 class="section-title">
+                <h2 class="section-title">
                     Sprachen
-                </h2> {% for language in site.data.languages %}
+                </h2>
 
-                    <div class="language">
+                {% for language in site.data.languages %}
 
-                        <div class="language-info">
+                <div class="language">
 
-                            <strong class="language-name">
+                    <div class="language-info">
+
+                        <strong class="language-name">
                             {{ language.language }}
                         </strong>
 
-                            <div class="language-level">
-                                {{ language.level }}
-                            </div>
-
-                        </div>
-
-                        <div class="dots" aria-label="{{ language.score }} von 5 Punkten">
-
-                            {% assign score = language.score | plus: 0 %} {% for i in (1..5) %} {% if i
-                            <=s core %} <span class="dot dot-filled">●</span>
-                                {% else %}
-                                <span class="dot dot-empty">○</span> {% endif %} {% endfor %}
-
+                        <div class="language-level">
+                            {{ language.level }}
                         </div>
 
                     </div>
 
-                    {% endfor %}
+                    <div
+                        class="dots"
+                        aria-label="{{ language.score }} von 5 Punkten"
+                    >
 
-                </section>
+                        {% assign score = language.score | plus: 0 %}
 
-                {% endif %}
+                        {% for i in (1..5) %}
+
+                            {% if i <= score %}
+                            <span class="dot dot-filled">●</span>
+                            {% else %}
+                            <span class="dot dot-empty">○</span>
+                            {% endif %}
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </section>
+
+            {% endif %}
 
 
-                <!-- ZERTIFIKATE -->
+            <!-- ZERTIFIKATE -->
 
-                {% if site.data.certificates %}
+            {% if site.data.certificates %}
 
-                <section class="section certificates-section">
+            <section class="section certificates-section">
 
-                    <h2 class="section-title">
+                <h2 class="section-title">
                     Zertifikate
-                </h2> {% for certificate in site.data.certificates %}
+                </h2>
 
-                    <article class="certificate">
+                {% for certificate in site.data.certificates %}
 
-                        <h3 class="certificate-title">
+                <article class="certificate">
+
+                    <h3 class="certificate-title">
                         {{ certificate.name }}
-                    </h3> {% if certificate.issuer %}
+                    </h3>
 
-                        <div class="certificate-issuer">
-                            {{ certificate.issuer }}
-                        </div>
+                    {% if certificate.issuer %}
 
-                        {% endif %}
+                    <div class="certificate-issuer">
+                        {{ certificate.issuer }}
+                    </div>
 
-                    </article>
+                    {% endif %}
 
-                    {% endfor %}
+                </article>
 
-                </section>
+                {% endfor %}
 
-                {% endif %}
+            </section>
+
+            {% endif %}
 
 
-                <!-- PROJEKTE -->
+            <!-- PROJEKTE -->
 
-                {% if site.data.projects %}
+            {% if site.data.projects %}
 
-                <section class="section projects-section">
+            <section class="section projects-section">
 
-                    <h2 class="section-title">
+                <h2 class="section-title">
                     Projekte
-                </h2> {% for project in site.data.projects %}
+                </h2>
 
-                    <article class="project">
+                {% for project in site.data.projects %}
 
-                        <h3 class="project-title">
+                <article class="project">
+
+                    <h3 class="project-title">
                         {{ project.name }}
-                    </h3> {% if project.customer %}
+                    </h3>
 
-                        <div class="company">
-                            {{ project.customer }}
-                        </div>
+                    {% if project.customer %}
 
-                        {% endif %} {% if project.period or project.location %}
+                    <div class="company">
+                        {{ project.customer }}
+                    </div>
 
-                        <div class="meta project-meta">
+                    {% endif %}
 
-                            {% if project.period %}
-                            <span>
+                    {% if project.period or project.location %}
+
+                    <div class="meta project-meta">
+
+                        {% if project.period %}
+                        <span>
                             {{ project.period }}
-                        </span> {% endif %} {% if project.location %}
-                            <span class="project-location">
-                            {{ project.location }}
-                        </span> {% endif %}
-
-                        </div>
-
-                        {% endif %} {% if project.bullets %}
-
-                        <ul class="bullet-list">
-
-                            {% for bullet in project.bullets %}
-
-                            <li>
-                                {{ bullet }}
-                            </li>
-
-                            {% endfor %}
-
-                        </ul>
-
+                        </span>
                         {% endif %}
 
-                    </article>
+                        {% if project.location %}
+                        <span class="project-location">
+                            {{ project.location }}
+                        </span>
+                        {% endif %}
 
-                    {% endfor %}
+                    </div>
 
-                </section>
+                    {% endif %}
 
-                {% endif %}
+                    {% if project.bullets %}
 
-            </aside>
+                    <ul class="bullet-list">
 
-        </main>
+                        {% for bullet in project.bullets %}
 
-    </div>
+                        <li>
+                            {{ bullet }}
+                        </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                    {% endif %}
+
+                </article>
+
+                {% endfor %}
+
+            </section>
+
+            {% endif %}
+
+        </aside>
+
+    </main>
+
+</div>
 
 </body>
 
