@@ -10,13 +10,11 @@
 
     <title>{{ site.data.personal.name }}</title>
 
-    <link rel="icon"
-          type="image/png"
-          href="{{ '/assets/favicon.png' | relative_url }}">
+    <link rel="icon" type="image/lative_url }}
 
-    <link rel="sume">
-
-    <header class="header">
+    <link rel="stylesheet"
+          href="{{ '/assets/resume.css' | relative_url }}">
+  <header class="header">
 
         <div>
 
@@ -42,15 +40,10 @@
 
         </div>
 
-        {% if site.static_files %}
-        {{ '/assets/profile.png' | relative_url }}
-        {% endif %}
-
-    </header>
-
-    <div class="content">
-
-        <!-- LINKE SPALTE -->
+        <img
+            class="profile-image"
+            src="{{ '/assets/profile.png' | relative_url }}"
+            alt
 
         <div>
 
@@ -81,13 +74,9 @@
                     </div>
 
                     <ul>
-
                         {% for item in job.bullets %}
-
                         <li>{{ item }}</li>
-
                         {% endfor %}
-
                     </ul>
 
                 </div>
@@ -109,9 +98,7 @@
                     </div>
 
                     {% for skill in site.data.skills.competence %}
-
                     <span class="skill">{{ skill }}</span>
-
                     {% endfor %}
 
                 </div>
@@ -123,9 +110,7 @@
                     </div>
 
                     {% for skill in site.data.skills.software %}
-
                     <span class="skill">{{ skill }}</span>
-
                     {% endfor %}
 
                 </div>
@@ -237,13 +222,11 @@
                         {% assign score = language.score | plus: 0 %}
 
                         {% for i in (1..5) %}
-
                             {% if i <= score %}
                                 ●
                             {% else %}
                                 ○
                             {% endif %}
-
                         {% endfor %}
 
                     </div>
@@ -293,41 +276,29 @@
                     </div>
 
                     {% if project.location %}
-
                     <div class="project-location">
                         {{ project.location }}
                     </div>
-
                     {% endif %}
 
                     {% if project.role %}
-
                     <div class="meta">
                         {{ project.role }}
                     </div>
-
                     {% endif %}
 
                     {% if project.description %}
-
                     <p>
                         {{ project.description }}
                     </p>
-
                     {% endif %}
 
                     {% if project.bullets %}
-
                     <ul>
-
                         {% for bullet in project.bullets %}
-
                         <li>{{ bullet }}</li>
-
                         {% endfor %}
-
                     </ul>
-
                     {% endif %}
 
                 </div>
