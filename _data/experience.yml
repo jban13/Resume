@@ -16,8 +16,8 @@
   to: 09/2020
   location: Lemförde, Deutschland
   bullets:
-    "- Titel der Masterarbeit:" Entwicklung einer Auswerteelektronik als Bindeglied zwischen bauteilintegrierter Sensorik und Telemetriesystemen
-    "-" Eigenständige Hardwareentwicklung (Komponentenauswahl, PCB-Design) sowie Embedded-Programmierung des TI CC26x2 SimpleLink™ Wireless MCU zur Ansteuerung und Auswertung der Sensorik
+    - Titel der Masterarbeit: Entwicklung einer Auswerteelektronik als Bindeglied zwischen bauteilintegrierter Sensorik und Telemetriesystemen
+    - Eigenständige Hardwareentwicklung (Komponentenauswahl, PCB-Design) sowie Embedded-Programmierung des TI CC26x2 SimpleLink™ Wireless MCU zur Ansteuerung und Auswertung der Sensorik
 
 #- title: Bachelorand
 #  company: Deutsches Institut für Lebensmitteltechnik
