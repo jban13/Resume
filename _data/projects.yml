@@ -1,30 +1,59 @@
-- name: Vibracoustic
-  customer: Vibracoustic
-  role: >
-    SPS-Programmierung und Inbetriebnahme
-    von Fertigungsanlagen.
-  period: 2023
-  technologies:
-    - TIA Portal
-    - WinCC
-    - Profinet
-  description: >
-    Automatisierung einer Produktionsanlage zur
-    Fertigung von Schwingungs- und
-    Geräuschdämpfungskomponenten für die
-    Automobilindustrie.
+- name: Robotergestützte Fertigungsanlage
+  customer: Mubea
+  period: 2025
+  location: Prag, Tschechien
+  bullet:
+    - Entwicklung und Inbetriebnahme einer automatisierten Fertigungslösung mit acht Industrierobotern
+    - Umsetzung der Prozesssteuerung für Reinigung, Dichtmittelauftrag, Prüfung und Materialhandling
+    - Rückverfolgbarkeit (Traceability) von Prozessdaten
   responsibilities:
     - SPS-Programmierung
     - Inbetriebnahme
     - Fehlersuche
     - Visualisierung
+    - Robotik
+    - Datenhandling
+# technologies:
+ #   - TIA Portal
+ #   - WinCC
+ #   - Profinet
 
-- name: BMW Karosseriebau
-  customer: BMW
-  role: SPS-Programmierung
-  period: 2024
-  technologies:
-    - TIA Portal
-    - ABB
-  description: >
-    Beschreibung folgt.
+- name: Produktionsanlage für Volkswagen
+  customer: Acozzuol
+  period: 2026
+  location: Buenos Aires, Argentinien
+  bullet:
+    - Softwareentwicklung und Inbetriebnahme von zwei automatisierten Fertigungsstationen und einer Dosieranlage
+    - Umsetzung der Prozesssteuerung sowie Integration der Anlagenkomponenten in die Produktionslinie einschließlich Traceability
+    - Optimierung der Anlagenfunktionen während der Inbetriebnahme
+  responsibilities:
+    - SPS-Programmierung
+    - Inbetriebnahme
+    - Fehlersuche
+    - Visualisierung
+    - Dosiertechnik
+    - Datenhandling
+# technologies:
+ #   - TIA Portal
+ #   - WinCC
+ #   - Profinet
+
+ - name: Umlaufförderer
+  customer: Vibracoustic
+  period: 2025 - 2026
+  location: Queretaro, Mexico
+  bullet:
+    - SPS-Programmierung und Inbetriebnahme von Fertigungsanlagen im Automobilzulieferumfeld
+    - Programmierung der Roboter für die automatische Vorbereitung und Entnahme sowie für den Einfüllvorgang
+    - Fertigungsanlage für NVH-Komponenten (Noise, Vibration, Harshness) zur Schwingungs- und Geräuschreduzierung in Fahrzeugen
+  responsibilities:
+    - SPS-Programmierung
+    - Inbetriebnahme
+    - Fehlersuche
+    - Visualisierung
+    - Robotik
+    - Datenhandling
+# technologies:
+ #   - TIA Portal
+ #   - WinCC
+ #   - Profinet
