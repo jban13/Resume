@@ -1,59 +1,59 @@
 - name: Robotergestützte Fertigungsanlage
-  customer: Mubea
-  period: 2025
-  location: Prag, Tschechien
-  bullets:
+   customer: Mubea
+   period: 2025
+   location: Prag, Tschechien
+   bullets:
     - Entwicklung und Inbetriebnahme einer automatisierten Fertigungslösung mit acht Industrierobotern
     - Umsetzung der Prozesssteuerung für Reinigung, Dichtmittelauftrag, Prüfung und Materialhandling
     - Rückverfolgbarkeit (Traceability) von Prozessdaten
-  responsibilities:
+   responsibilities:
     - SPS-Programmierung
     - Inbetriebnahme
     - Fehlersuche
     - Visualisierung
     - Robotik
     - Datenhandling
-# technologies:
+#  technologies:
  #   - TIA Portal
  #   - WinCC
  #   - Profinet
 
 - name: Produktionsanlage für Volkswagen
-  customer: Acozzuol
-  period: 2026
-  location: Buenos Aires, Argentinien
-  bullets:
+   customer: Acozzuol
+   period: 2026
+   location: Buenos Aires, Argentinien
+   bullets:
     - Softwareentwicklung und Inbetriebnahme von zwei automatisierten Fertigungsstationen und einer Dosieranlage
     - Umsetzung der Prozesssteuerung sowie Integration der Anlagenkomponenten in die Produktionslinie einschließlich Traceability
     - Optimierung der Anlagenfunktionen während der Inbetriebnahme
-  responsibilities:
+   responsibilities:
     - SPS-Programmierung
     - Inbetriebnahme
     - Fehlersuche
     - Visualisierung
     - Dosiertechnik
     - Datenhandling
-# technologies:
+#  technologies:
  #   - TIA Portal
  #   - WinCC
  #   - Profinet
 
  - name: Umlaufförderer
-  customer: Vibracoustic
-  period: 2025 - 2026
-  location: Queretaro, Mexico
-  bullets:
+   customer: Vibracoustic
+   period: 2025 - 2026
+   location: Queretaro, Mexico
+   bullets:
     - SPS-Programmierung und Inbetriebnahme von Fertigungsanlagen im Automobilzulieferumfeld
     - Programmierung der Roboter für die automatische Vorbereitung und Entnahme sowie für den Einfüllvorgang
     - Fertigungsanlage für NVH-Komponenten (Noise, Vibration, Harshness) zur Schwingungs- und Geräuschreduzierung in Fahrzeugen
-  responsibilities:
+   responsibilities:
     - SPS-Programmierung
     - Inbetriebnahme
     - Fehlersuche
     - Visualisierung
     - Robotik
     - Datenhandling
-# technologies:
+#  technologies:
  #   - TIA Portal
  #   - WinCC
  #   - Profinet
