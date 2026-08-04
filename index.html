@@ -73,7 +73,7 @@
                 {% if site.data.personal.birthdate or site.data.personal.birthplace %}
                 <span class="contact-item">
                     {% if site.data.personal.birthdate and site.data.personal.birthplace %}
-                    ,
+                    {{ site.data.personal.birthdate }} , {{ site.data.personal-birthplace }}
                     {% endif %}
                 </span>
                 {% endif %}
