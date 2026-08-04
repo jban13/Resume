@@ -1,7 +1,7 @@
 - language: Deutsch
-   level: Muttersprache
-   score: 5
+  level: Muttersprache
+  score: 5
 
 - language: Englisch
-   level: Versiert
-   score: 4
+  level: Versiert
+  score: 4
