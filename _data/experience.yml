@@ -16,25 +16,25 @@
   to: 09/2020
   location: Lemförde, Deutschland
   bullets:
-    - Titel der Masterarbeit: Entwicklung einer Auswerteelektronik als Bindeglied zwischen bauteilintegrierter Sensorik und Telemetriesystemen
+    - Titel der Masterarbeit - Entwicklung einer Auswerteelektronik als Bindeglied zwischen bauteilintegrierter Sensorik und Telemetriesystemen
     - Eigenständige Hardwareentwicklung (Komponentenauswahl, PCB-Design) sowie Embedded-Programmierung des TI CC26x2 SimpleLink™ Wireless MCU zur Ansteuerung und Auswertung der Sensorik
 
-#- title: Bachelorand
-#  company: Deutsches Institut für Lebensmitteltechnik
-#  from: 09/2017
-#  to: 02/2018
-#  location: Quakenbrück
-#  bullets:
-#    - Automatisiertes Füllsystem
-#    - Raspberry Pi Entwicklung
-#    - Qt GUI Entwicklung
+- title: Bachelorand
+  company: Deutsches Institut für Lebensmitteltechnik
+  from: 09/2017
+  to: 02/2018
+  location: Quakenbrück
+  bullets:
+    - Titel der Bachelorarbeit - Konzeptionierung, Realisierung und Validierung eines automatisierten Füllsystems
+    - Eigenständige Entwicklung eines Embedded-Systems auf Basis eines Raspberry Pi einschließlich CAD-Konstruktion des Gehäuses, Hardwareaufbau und Verkabelung
+    - Programmierung der Anwendung und Umsetzung der grafischen Benutzeroberfläche mit Qt sowie Integration und Inbetriebnahme des Gesamtsystems
 
-#- title: Wissenschaftlicher Mitarbeiter
-#  company: Hochschule Osnabrück
-#  from: 05/2015
-#  to: 09/2015
-#  location: Osnabrück
-#  bullets:
-#    - Vorlesungsunterlagen
-#    - LaTeX Dokumentationen
-#    - Aufbereitung von Lehrinhalten
+- title: Wissenschaftlicher Mitarbeiter
+  company: Hochschule Osnabrück
+  from: 05/2015
+  to: 09/2015
+  location: Osnabrück
+  bullets:
+    - Digitale Bereitstellung und Verwaltung von Vorlesungs- und Übungsmaterialien
+    - Erstellung strukturierter Musterlösungen und Dokumentationen in LaTeX
+    - Unterstützung bei der Aufbereitung und Veröffentlichung von Lehrinhalten
