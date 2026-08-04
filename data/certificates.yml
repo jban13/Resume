@@ -1,0 +1,5 @@
+- name: Siemens PCS7
+  issuer: Siemens
+
+- name: Siemens Solution Partner
+  issuer: Siemens
