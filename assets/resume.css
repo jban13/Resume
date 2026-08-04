@@ -61,7 +61,7 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 60% 35%;
+    grid-template-columns: 55% 40%;
     gap: 45px;
 }
 
@@ -71,7 +71,7 @@ body {
 
 .section-title {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 14px;
     color: #666;
     border-bottom: 2px solid var(--line);
     padding-bottom: 3px;
