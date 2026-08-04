@@ -170,7 +170,6 @@ body {
 }
 
 @media print {
-
     body {
         background: white;
     }
