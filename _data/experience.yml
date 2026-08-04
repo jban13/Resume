@@ -1,61 +1,39 @@
 - title: Automatisierungsingenieur
-
   company: FRIMO Innovative Technologies GmbH
-
   from: 10/2020
-
   to: Aktuell
-
-  location: Lotte / Hamburg, Deutschland
-
+  location: Lotte, Deutschland
   bullets:
-    - SPS-Programmierung mit Siemens TIA Portal
-    - Inbetriebnahme großer Produktionsanlagen
-    - Fehleranalyse und Störungsbehebung
-    - WinCC & Unified Visualisierung
-    - Schulung des Bedienpersonals
+    - Entwicklung und Optimierung von SPS-Programmen mit Siemens TIA Portal für automatisierte Fertigungsanlagen
+    - Durchführung der Inbetriebnahmen von großen Produktionsanlagen bei Kunden in Mexico, Argentinien, China und Südafrika
+    - Analyse und Behebung von Störungen im laufenden Betrieb zur Stabilisierung der Anlage
+    - Konzeption und Umsetzung von WinCC-Visualisierungen für doe gesamte Anlage
+    - Erstellung technischer Dokumentationen sowie Schulung des Bedienpersonals
 
 - title: Masterand & Werkstudent
-
-  company: ZF
-
+  company: ZF Friedrichshafen AG
   from: 08/2019
-
   to: 09/2020
-
   location: Lemförde, Deutschland
-
   bullets:
-    - Hardwareentwicklung
-    - PCB Design
-    - Embedded Programmierung
-    - Sensorik und Telemetrie
+    - "Titel der Masterarbeit:" Entwicklung einer Auswerteelektronik als Bindeglied zwischen bauteilintegrierter Sensorik und Telemetriesystemen
+    - Eigenständige Hardwareentwicklung (Komponentenauswahl, PCB-Design) sowie Embedded-Programmierung des TI CC26x2 SimpleLink™ Wireless MCU zur Ansteuerung und Auswertung der Sensorik
 
 - title: Bachelorand
-
   company: Deutsches Institut für Lebensmitteltechnik
-
   from: 09/2017
-
   to: 02/2018
-
   location: Quakenbrück
-
   bullets:
     - Automatisiertes Füllsystem
     - Raspberry Pi Entwicklung
     - Qt GUI Entwicklung
 
 - title: Wissenschaftlicher Mitarbeiter
-
   company: Hochschule Osnabrück
-
   from: 05/2015
-
   to: 09/2015
-
   location: Osnabrück
-
   bullets:
     - Vorlesungsunterlagen
     - LaTeX Dokumentationen
