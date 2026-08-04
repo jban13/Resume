@@ -1,11 +1,20 @@
 - degree: Master of Science
-
   field: Mechatronic Systems Engineering
-
   university: Hochschule Osnabrück
-
   from: 02/2018
-
   to: 10/2020
+  location: Osnabrück
 
+- degree: Bachelor of Science
+  field: Mechatronik
+  university: Hochschule Osnabrück
+  from: 09/2014
+  to: 02/2018
+  location: Osnabrück
+  
+- degree: Abitur
+  field: Schwerpunkt Mechatronik
+  university: Technisches Gymnasium Osnabrück
+  from: 2010
+  to: 2014
   location: Osnabrück
