@@ -1,0 +1,9 @@
+title: Jan Borgmeier
+description: Senior Ingenieur | Automatisierungsingenieur
+
+plugins: []
+
+markdown: kramdown
+
+exclude:
+  - README.md
