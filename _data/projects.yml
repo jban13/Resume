@@ -2,7 +2,7 @@
   customer: Mubea
   period: 2025
   location: Prag, Tschechien
-  bullet:
+  bullets:
     - Entwicklung und Inbetriebnahme einer automatisierten Fertigungslösung mit acht Industrierobotern
     - Umsetzung der Prozesssteuerung für Reinigung, Dichtmittelauftrag, Prüfung und Materialhandling
     - Rückverfolgbarkeit (Traceability) von Prozessdaten
@@ -22,7 +22,7 @@
   customer: Acozzuol
   period: 2026
   location: Buenos Aires, Argentinien
-  bullet:
+  bullets:
     - Softwareentwicklung und Inbetriebnahme von zwei automatisierten Fertigungsstationen und einer Dosieranlage
     - Umsetzung der Prozesssteuerung sowie Integration der Anlagenkomponenten in die Produktionslinie einschließlich Traceability
     - Optimierung der Anlagenfunktionen während der Inbetriebnahme
@@ -42,7 +42,7 @@
   customer: Vibracoustic
   period: 2025 - 2026
   location: Queretaro, Mexico
-  bullet:
+  bullets:
     - SPS-Programmierung und Inbetriebnahme von Fertigungsanlagen im Automobilzulieferumfeld
     - Programmierung der Roboter für die automatische Vorbereitung und Entnahme sowie für den Einfüllvorgang
     - Fertigungsanlage für NVH-Komponenten (Noise, Vibration, Harshness) zur Schwingungs- und Geräuschreduzierung in Fahrzeugen
