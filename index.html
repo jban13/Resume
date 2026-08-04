@@ -1,3 +1,6 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="de">
 
@@ -5,18 +8,517 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>CSS Test</title>
+    <meta
+        name="description"
+        content="{{ site.data.personal.title }} – Lebenslauf von {{ site.data.personal.name }}"
+    >
 
-    <link rel="stylesheet" href="assets/resume.css">
+    <title>
+        {{ site.data.personal.name }} | Lebenslauf
+    </title>
+
+    <!-- Favicon -->
+    assets/favicon.png
+
+    <!-- Lebenslauf-Layout -->
+    assets/resume.css
+</head>
+
+<body>
+
 <div class="resume">
 
-    <h1 class="name">
-        Jan Borgmeier
-    </h1>
+    <!-- =====================================================
+         KOPFBEREICH
+         ===================================================== -->
 
-    <div class="subtitle">
-        Senior Ingenieur 6
-    </div>
+    <header class="header">
+
+        <div class="header-content">
+
+            <h1 class="name">
+                {{ site.data.personal.name }}
+            </h1>
+
+            <div class="subtitle">
+                {{ site.data.personal.title }}
+            </div>
+
+            <div class="contact">
+
+                {% if site.data.personal.phone %}
+                <span class="contact-item">
+                    {{ site.data.personal.phone }}
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.email %}
+                <span class="contact-item">
+                    {{ site.data.personal.email }}
+                        {{ site.data.personal.email }}
+                    </a>
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.linkedin %}
+                <span class="contact-item">
+                    https://{{ site.data.personal.linkedin }}
+                        {{ site.data.personal.linkedin }}
+                    </a>
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.location %}
+                <span class="contact-item">
+                    {{ site.data.personal.location }}
+                </span>
+                {% endif %}
+
+                {% if site.data.personal.birthdate or site.data.personal.birthplace %}
+                <span class="contact-item">
+                    {{ site.data.personal.birthdate }}
+
+                    {% if site.data.personal.birthdate and site.data.personal.birthplace %}
+                    ,
+                    {% endif %}
+
+                    {{ site.data.personal.birthplace }}
+                </span>
+                {% endif %}
+
+            </div>
+
+        </div>
+
+        <!--
+            Das Bild wird automatisch ausgeblendet,
+            solange assets/profile.png noch nicht existiert.
+        -->
+
+        <div class="profile-container">
+
+            assets/profile.png
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         ZWEISPALTIGER HAUPTBEREICH
+         ===================================================== -->
+
+    <main class="content">
+
+        <!-- =================================================
+             LINKE SPALTE
+             ================================================= -->
+
+        <div class="left-column">
+
+            <!-- BERUFSERFAHRUNG -->
+
+            <section class="section experience-section">
+
+                <h2 class="section-title">
+                    Erfahrung
+                </h2>
+
+                {% for job in site.data.experience %}
+
+                <article class="job">
+
+                    <h3 class="job-title">
+                        {{ job.title }}
+                    </h3>
+
+                    <div class="company">
+                        {{ job.company }}
+                    </div>
+
+                    <div class="meta job-meta">
+
+                        <span class="date">
+                            {{ job.from }} – {{ job.to }}
+                        </span>
+
+                        {% if job.location %}
+                        <span class="location">
+                            {{ job.location }}
+                        </span>
+                        {% endif %}
+
+                    </div>
+
+                    {% if job.bullets %}
+
+                    <ul class="bullet-list">
+
+                        {% for item in job.bullets %}
+
+                        <li>
+                            {{ item }}
+                        </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                    {% endif %}
+
+                </article>
+
+                {% endfor %}
+
+            </section>
+
+
+            <!-- KENNTNISSE -->
+
+            <section class="section skills-section">
+
+                <h2 class="section-title">
+                    Kenntnisse
+                </h2>
+
+                <div class="skill-category">
+
+                    <h3 class="skill-category-title">
+                        Fachliche Kompetenz
+                    </h3>
+
+                    <div class="skills">
+
+                        {% for skill in site.data.skills.competence %}
+
+                        <span class="skill">
+                            {{ skill }}
+                        </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+                <div class="skill-category">
+
+                    <h3 class="skill-category-title">
+                        Software &amp; Tools
+                    </h3>
+
+                    <div class="skills">
+
+                        {% for skill in site.data.skills.software %}
+
+                        <span class="skill">
+                            {{ skill }}
+                        </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INTERESSEN -->
+
+            <section class="section interests-section">
+
+                <h2 class="section-title">
+                    Interessen
+                </h2>
+
+                <div class="interests">
+
+                    {% for interest in site.data.interests %}
+
+                    <article class="interest">
+
+                        <h3 class="interest-title">
+                            {{ interest.title }}
+                        </h3>
+
+                        <div class="interest-text">
+                            {{ interest.description }}
+                        </div>
+
+                    </article>
+
+                    {% endfor %}
+
+                </div>
+
+            </section>
+
+        </div>
+
+
+        <!-- =================================================
+             RECHTE SPALTE
+             ================================================= -->
+
+        <aside class="right-column">
+
+            <!-- ZUSAMMENFASSUNG -->
+
+            <section class="section summary-section">
+
+                <h2 class="section-title">
+                    Zusammenfassung
+                </h2>
+
+                <div class="summary">
+                    {{ site.data.summary.text }}
+                </div>
+
+            </section>
+
+
+            <!-- AUSBILDUNG -->
+
+            <section class="section education-section">
+
+                <h2 class="section-title">
+                    Ausbildung
+                </h2>
+
+                {% for item in site.data.education %}
+
+                <article class="job education-item">
+
+                    <h3 class="job-title">
+
+                        {{ item.degree }}
+
+                        {% if item.field %}
+                        – {{ item.field }}
+                        {% endif %}
+
+                    </h3>
+
+                    <div class="company">
+                        {{ item.university }}
+                    </div>
+
+                    <div class="meta">
+
+                        <span class="date">
+                            {{ item.from }} – {{ item.to }}
+                        </span>
+
+                        {% if item.location %}
+                        <span class="location">
+                            {{ item.location }}
+                        </span>
+                        {% endif %}
+
+                    </div>
+
+                </article>
+
+                {% endfor %}
+
+            </section>
+
+
+            <!-- SPRACHEN -->
+
+            {% if site.data.languages %}
+
+            <section class="section languages-section">
+
+                <h2 class="section-title">
+                    Sprachen
+                </h2>
+
+                {% for language in site.data.languages %}
+
+                <div class="language">
+
+                    <div class="language-info">
+
+                        <strong class="language-name">
+                            {{ language.language }}
+                        </strong>
+
+                        <div class="language-level">
+                            {{ language.level }}
+                        </div>
+
+                    </div>
+
+                    <div
+                        class="dots"
+                        aria-label="{{ language.score }} von 5 Punkten"
+                    >
+
+                        {% assign score = language.score | plus: 0 %}
+
+                        {% for i in (1..5) %}
+
+                            {% if i <= score %}
+                            <span class="dot dot-filled">●</span>
+                            {% else %}
+                            <span class="dot dot-empty">○</span>
+                            {% endif %}
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- ZERTIFIKATE -->
+
+            {% if site.data.certificates %}
+
+            <section class="section certificates-section">
+
+                <h2 class="section-title">
+                    Zertifikate
+                </h2>
+
+                {% for certificate in site.data.certificates %}
+
+                <article class="certificate">
+
+                    <h3 class="certificate-title">
+                        {{ certificate.name }}
+                    </h3>
+
+                    {% if certificate.issuer %}
+
+                    <div class="certificate-issuer">
+                        {{ certificate.issuer }}
+                    </div>
+
+                    {% endif %}
+
+                </article>
+
+                {% endfor %}
+
+            </section>
+
+            {% endif %}
+
+
+            <!-- PROJEKTE -->
+
+            {% if site.data.projects %}
+
+            <section class="section projects-section">
+
+                <h2 class="section-title">
+                    Projekte
+                </h2>
+
+                {% for project in site.data.projects %}
+
+                <article class="project">
+
+                    <h3 class="project-title">
+                        {{ project.name }}
+                    </h3>
+
+                    {% if project.customer %}
+
+                    <div class="company">
+                        {{ project.customer }}
+                    </div>
+
+                    {% endif %}
+
+                    {% if project.period or project.location %}
+
+                    <div class="meta project-meta">
+
+                        {% if project.period %}
+                        <span>
+                            {{ project.period }}
+                        </span>
+                        {% endif %}
+
+                        {% if project.location %}
+                        <span class="project-location">
+                            {{ project.location }}
+                        </span>
+                        {% endif %}
+
+                    </div>
+
+                    {% endif %}
+
+                    {% if project.role %}
+
+                    <div class="project-role">
+                        {{ project.role }}
+                    </div>
+
+                    {% endif %}
+
+                    {% if project.description %}
+
+                    <div class="project-description">
+                        {{ project.description }}
+                    </div>
+
+                    {% endif %}
+
+                    {% if project.bullets %}
+
+                    <ul class="bullet-list">
+
+                        {% for bullet in project.bullets %}
+
+                        <li>
+                            {{ bullet }}
+                        </li>
+
+                        {% endfor %}
+
+                    </ul>
+
+                    {% endif %}
+
+                    {% if project.technologies %}
+
+                    <div class="project-technologies">
+
+                        {% for technology in project.technologies %}
+
+                        <span class="skill">
+                            {{ technology }}
+                        </span>
+
+                        {% endfor %}
+
+                    </div>
+
+                    {% endif %}
+
+                </article>
+
+                {% endfor %}
+
+            </section>
+
+            {% endif %}
+
+        </aside>
+
+    </main>
 
 </div>
 
