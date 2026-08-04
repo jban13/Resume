@@ -3,31 +3,25 @@
 
 <!DOCTYPE html>
 <html lang="de">
-
 <head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
 
-    <title>
-        {{ site.data.personal.name }}
-    </title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type   <links/resume.css
+<title>{{ site.data.personal.name }}</title>
+
+<link rel="icon"
+      type="image/png"
+      href="assets/favicon.png">
+
+<link rel="stylesheet"
+      href="assets/resume.css">
 
 </head>
 
-<body>
-
-<div class="resume">
-
-    <!-- Header -->
-
-    <div class="header">
-
-        <div>
-
-            <h1 class="name">
+s="name">
                 {{ site.data.personal.name }}
             </h1>
 
@@ -36,30 +30,23 @@
             </div>
 
             <div class="contact">
-
                 <span>{{ site.data.personal.phone }}</span>
-
                 <span>{{ site.data.personal.email }}</span>
-
                 <span>{{ site.data.personal.linkedin }}</span>
-
                 <span>{{ site.data.personal.location }}</span>
-
             </div>
 
         </div>
 
+        assets/profile.png
+
+    </div>
+
+    <div class="content">
+
+        <!-- LINKE SPALTE -->
+
         <div>
-
-            <img
-                src="assets/profile.png"
-                class="profile-imagev class="content">
-
-        <!-- Linke Spalte -->
-
-        <div>
-
-            <!-- Erfahrung -->
 
             <section class="section">
 
@@ -88,13 +75,9 @@
                     </div>
 
                     <ul>
-
                         {% for item in job.bullets %}
-
                         <li>{{ item }}</li>
-
                         {% endfor %}
-
                     </ul>
 
                 </div>
@@ -103,100 +86,6 @@
 
             </section>
 
-            <!-- Projekte -->
-
-            <section class="section">
-
-                <div class="section-title">
-                    Projekte
-                </div>
-
-                {% for project in site.data.projects %}
-
-                <div class="project">
-
-                    <div class="project-title">
-                        {{ project.name }}
-                    </div>
-
-                    <div class="project-role">
-                        {{ project.role }}
-                    </div>
-
-                    <p>
-                        {{ project.description }}
-                    </p>
-
-                    {% if project.technologies %}
-
-                    <div class="skills" style="margin-top:10px;">
-
-                        {% for tech in project.technologies %}
-
-                        <span class="skill">
-                            {{ tech }}
-                        </span>
-
-                        {% endfor %}
-
-                    </div>
-
-                    {% endif %}
-
-                </div>
-
-                {% endfor %}
-
-            </section>
-
-        </div>
-
-        <!-- Rechte Spalte -->
-
-        <div>
-
-            <!-- Zusammenfassung -->
-
-            <section class="section">
-
-                <div class="section-title">
-                    Zusammenfassung
-                </div>
-
-                <div class="summary">
-                    {{ site.data.summary.text }}
-                </div>
-
-            </section>
-
-            <!-- Ausbildung -->
-
-            <section class="section">
-
-                <div class="section-title">
-                    Ausbildung
-                </div>
-
-                {% for item in site.data.education %}
-
-                <div class="job-title">
-                    {{ item.degree }}
-                </div>
-
-                <div class="company">
-                    {{ item.university }}
-                </div>
-
-                <div class="meta">
-                    {{ item.from }} - {{ item.to }}
-                </div>
-
-                {% endfor %}
-
-            </section>
-
-            <!-- Kenntnisse -->
-
             <section class="section">
 
                 <div class="section-title">
@@ -204,48 +93,26 @@
                 </div>
 
                 <div class="skill-category">
-
                     <div class="skill-category-title">
                         Fachliche Kompetenz
                     </div>
 
-                    <div class="skills">
-
-                        {% for skill in site.data.skills.competence %}
-
-                        <span class="skill">
-                            {{ skill }}
-                        </span>
-
-                        {% endfor %}
-
-                    </div>
-
+                    {% for skill in site.data.skills.competence %}
+                    <span class="skill">{{ skill }}</span>
+                    {% endfor %}
                 </div>
 
                 <div class="skill-category">
-
                     <div class="skill-category-title">
                         Software & Tools
                     </div>
 
-                    <div class="skills">
-
-                        {% for skill in site.data.skills.software %}
-
-                        <span class="skill">
-                            {{ skill }}
-                        </span>
-
-                        {% endfor %}
-
-                    </div>
-
+                    {% for skill in site.data.skills.software %}
+                    <span class="skill">{{ skill }}</span>
+                    {% endfor %}
                 </div>
 
             </section>
-
-            <!-- Interessen -->
 
             <section class="section">
 
@@ -263,7 +130,7 @@
                             {{ interest.title }}
                         </div>
 
-                        <div class="interest-text">
+                        <div>
                             {{ interest.description }}
                         </div>
 
@@ -277,10 +144,136 @@
 
         </div>
 
+        <!-- RECHTE SPALTE -->
+
+        <div>
+
+            <section class="section">
+
+                <div class="section-title">
+                    Zusammenfassung
+                </div>
+
+                <div class="summary">
+                    {{ site.data.summary.text }}
+                </div>
+
+            </section>
+
+            <section class="section">
+
+                <div class="section-title">
+                    Ausbildung
+                </div>
+
+                {% for item in site.data.education %}
+
+                <div class="job">
+
+                    <div class="job-title">
+                        {{ item.degree }}
+                    </div>
+
+                    <div class="company">
+                        {{ item.university }}
+                    </div>
+
+                    <div class="meta">
+                        {{ item.from }} - {{ item.to }}
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </section>
+
+            <section class="section">
+
+                <div class="section-title">
+                    Sprachen
+                </div>
+
+                {% for language in site.data.languages %}
+
+                <div class="language">
+
+                    <div>
+                        <strong>{{ language.language }}</strong><br>
+                        {{ language.level }}
+                    </div>
+
+                    <div class="dots">
+                        {% for i in (1..language.score) %}
+                        ●
+                        {% endfor %}
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </section>
+
+            <section class="section">
+
+                <div class="section-title">
+                    Zertifikate
+                </div>
+
+                {% for cert in site.data.certificates %}
+
+                <div class="job">
+
+                    <div class="company">
+                        {{ cert.name }}
+                    </div>
+
+                    <div>
+                        {{ cert.issuer }}
+                    </div>
+
+                </div>
+
+                {% endfor %}
+
+            </section>
+
+            <section class="section">
+
+                <div class="section-title">
+                    Projekte
+                </div>
+
+                {% for project in site.data.projects %}
+
+                <div class="project">
+
+                    <div class="project-title">
+                        {{ project.name }}
+                    </div>
+
+                    <div class="project-location">
+                        {{ project.location }}
+                    </div>
+
+                    <ul>
+                        {% for item in project.bullets %}
+                        <li>{{ item }}</li>
+                        {% endfor %}
+                    </ul>
+
+                </div>
+
+                {% endfor %}
+
+            </section>
+
+        </div>
+
     </div>
 
 </div>
 
 </body>
-
 </html>
